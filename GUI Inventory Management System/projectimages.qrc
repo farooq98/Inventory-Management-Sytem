@@ -1,0 +1,38 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>inventory-management-system.jpg</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>products-png-5.png</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>SNP_29271A9F131A2BFDF369CD990598E1D76169_3270506_en_v0.png</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>ecommerce-clipart-digital-commerce-316280-8206820.png</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>what-makes-a-good-sales-manager-blog-header-1-650x377.jpg</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>Secret-Solutions-to-Effective-Sales-Conversations-Identified.png</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>Gated-Products.jpg</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>sales-manifesto-sales-pipeline-visibility-1296x678.jpg</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>mainform.jpg</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>slide2.png</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>Get-started-on-Walmart-Go-from-0-800-orders-with-fast-shipping.png</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>87331166-shopping-cart-and-laptop-computer-with-products-isolated-on-white-background-shop-online-concept-.jpg</file>
+  </qresource>
+</RCC>

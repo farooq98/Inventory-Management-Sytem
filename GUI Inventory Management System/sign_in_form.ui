@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>778</width>
+    <height>408</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sign In</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>-10</y>
+     <width>801</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame{
+background-image: url(:/newPrefix/Login Image.jpg);
+}
+#frame_2{
+background-color: rgba(0,95,155,0.5);
+border-radius: 10px;
+}
+#signInGroupBox{
+color: white;
+}
+#userlbl{
+color: white;
+}
+#passwordlbl{
+color: white;
+}
+#usertxtbox{
+color: white;
+border-radius: 1px;
+background-color: transparent;
+border-bottom: 1px solid white
+}
+#passwordtxtbox{
+background-color: transparent;
+color: white;
+border-radius: 1px;
+border-bottom: 1px solid white
+}
+#signinBtn{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+}
+#signinBtn:hover{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+background-color: rgb(0,95,155);
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>30</y>
+      <width>341</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QGroupBox" name="signInGroupBox">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>50</y>
+       <width>261</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>Sign In</string>
+     </property>
+     <widget class="QLineEdit" name="usertxtbox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>211</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="passwordtxtbox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>150</y>
+        <width>221</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="userlbl">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Username</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="passwordlbl">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Password</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="signInerrorLbl">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>186</y>
+        <width>221</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="signinBtn">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>280</y>
+       <width>261</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Sign In</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="login.qrc"/>
+ </resources>
+ <connections/>
+</ui>

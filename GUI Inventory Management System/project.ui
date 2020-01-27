@@ -1,0 +1,3796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>955</width>
+    <height>692</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Inventory  Management System</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>961</width>
+     <height>701</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Triangular</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Products</string>
+    </attribute>
+    <widget class="QFrame" name="mainFrame">
+     <property name="geometry">
+      <rect>
+       <x>-90</x>
+       <y>-150</y>
+       <width>1199</width>
+       <height>831</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#mainFrame{
+background-color:rgb(143,213,233);
+}
+
+#searchBtn:hover{
+background-color: rgba(0,0,0,0.5);
+border-radius: 10px;
+color: white;
+}
+#searchBtn{
+background-color: rgba(21,149,136,0.8);
+
+border-radius: 10px;
+color: white;
+}
+#searchtxtbox{
+color: white;
+border-radius: 1px;
+background-color: transparent;
+border-bottom: 1px solid white;
+}
+#searchframe{
+background-color: rgba(21,149,136,0.5);
+border-radius: 10px;
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QTableWidget" name="productTable">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>260</y>
+        <width>631</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgba(21,149,136,0.5);
+border-radius: 10px;
+color: white;
+</string>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::NoSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectItems</enum>
+      </property>
+      <property name="showGrid">
+       <bool>false</bool>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>5</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <item row="0" column="0">
+       <property name="text">
+        <string>ID</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+       <property name="flags">
+        <set>ItemIsUserCheckable|ItemIsEnabled</set>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>Name</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>Category</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>Quantity</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="4">
+       <property name="text">
+        <string>Price</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="flags">
+        <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="flags">
+        <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+       </property>
+      </item>
+     </widget>
+     <widget class="QFrame" name="searchframe">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>190</y>
+        <width>631</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="searchtxtbox">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>371</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="placeholderText">
+        <string>Search here</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="searchBtn">
+       <property name="geometry">
+        <rect>
+         <x>520</x>
+         <y>10</y>
+         <width>101</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>11</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#comboBox{
+color: white;
+border-radius: 1px;
+background-color: transparent;
+border-bottom: 1px solid white;
+}</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>All</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Name</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Category</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Quantity</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Price</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>180</y>
+        <width>1021</width>
+        <height>621</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/newPrefix/products-png-5.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label_13</zorder>
+     <zorder>productTable</zorder>
+     <zorder>searchframe</zorder>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>Add To Cart</string>
+    </attribute>
+    <widget class="QFrame" name="addtocartFrame">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>-10</y>
+       <width>981</width>
+       <height>731</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#addtocartFrame{background-color: rgb(200,199,168)}
+#cartTable{
+background-color: rgba(0,95,155,0.5);
+border-radius: 10px;
+color: white;
+}
+#removeframe{
+background-color: rgba(162,160,108,0.5);
+border-radius: 10px;
+color: white;
+}
+#productIDlbl2{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white; 
+}
+#removeproductTxtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+
+
+#sellPrice_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#removeproductBtn{
+	color: white;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+#removeproductBtn:hover{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+background-color: rgb(162,160,108);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>40</y>
+        <width>351</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(162,160,108,0.5);
+	border-radius: 10px;
+color:White;</string>
+      </property>
+      <property name="text">
+       <string>Manage Cart</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QFrame" name="cartFrame">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>110</y>
+        <width>321</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#cartFrame{
+background-color: rgba(162,160,108,0.5);
+	border-radius: 10px;
+}
+#customerIDlbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white; 
+}
+#productIDlbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white; 
+}
+#customerIDtxtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#productIDtxtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#datelbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#quantitytxtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#datetxtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#cat_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#addproductqtyllbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#qty_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#buyPrice_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#buyPrice_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#sellPrice_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#sellPrice_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#addtocartBtn{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+}
+#addtocartBtn:hover{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+background-color: rgb(162,160,108);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="customerIDlbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>100</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Customer ID</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="customerIDtxtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>120</y>
+         <width>261</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="productIDlbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>160</y>
+         <width>111</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Product ID</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="productIDtxtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>180</y>
+         <width>261</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="addproductqtyllbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>220</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Quantity</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="quantitytxtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>240</y>
+         <width>261</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="datelbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>280</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Date</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="datetxtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>300</y>
+         <width>261</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="addtocartBtn">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>360</y>
+         <width>221</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Add To Cart</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="buyProductBtn">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>410</y>
+         <width>221</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#buyProductBtn{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+}
+#buyProductBtn:hover{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+background-color: rgb(162,160,108);
+}</string>
+       </property>
+       <property name="text">
+        <string>Buy</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QTableWidget" name="cartTable">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>160</y>
+        <width>521</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(162,160,108,0.5);
+color: white;</string>
+      </property>
+      <property name="showGrid">
+       <bool>false</bool>
+      </property>
+      <property name="rowCount">
+       <number>5</number>
+      </property>
+      <property name="columnCount">
+       <number>5</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <item row="0" column="0">
+       <property name="text">
+        <string>Cus ID</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>Prod ID</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>Name</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>Quantity</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="4">
+       <property name="text">
+        <string>Price</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+     </widget>
+     <widget class="QFrame" name="removeframe">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>510</y>
+        <width>521</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="removeproductTxtbox">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>10</y>
+         <width>371</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="placeholderText">
+        <string>Tyoe Here</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="productIDlbl2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Product ID</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="removeproductBtn">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>50</y>
+         <width>121</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Remove</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="emptyCartBtn">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>50</y>
+         <width>121</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#emptyCartBtn{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+}
+#emptyCartBtn:hover{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+background-color: rgb(162,160,108);
+}</string>
+       </property>
+       <property name="text">
+        <string>Empty</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>110</y>
+        <width>351</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(162,160,108,0.5);
+	border-radius: 10px;
+color:White;</string>
+      </property>
+      <property name="text">
+       <string>Cart</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cart_total_lbl">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>460</y>
+        <width>351</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(162,160,108,0.5);
+	border-radius: 10px;
+color:White;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cartError_lbl">
+      <property name="geometry">
+       <rect>
+        <x>-20</x>
+        <y>-40</y>
+        <width>1091</width>
+        <height>711</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/newPrefix/ecommerce-clipart-digital-commerce-316280-8206820.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>620</y>
+        <width>341</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <zorder>cartError_lbl</zorder>
+     <zorder>label_6</zorder>
+     <zorder>cartFrame</zorder>
+     <zorder>cartTable</zorder>
+     <zorder>removeframe</zorder>
+     <zorder>label_7</zorder>
+     <zorder>cart_total_lbl</zorder>
+     <zorder>label_14</zorder>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_7">
+    <attribute name="title">
+     <string>Manage Customer</string>
+    </attribute>
+    <widget class="QFrame" name="ManageCustomeFrame">
+     <property name="geometry">
+      <rect>
+       <x>-30</x>
+       <y>-10</y>
+       <width>991</width>
+       <height>711</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#ManageCustomeFrame{
+background-color:rgba(53,151,212);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>50</y>
+        <width>821</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/newPrefix/sales-manifesto-sales-pipeline-visibility-1296x678.jpg);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QFrame" name="manageCustomerFrame">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>110</y>
+        <width>351</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#manageCustomerFrame{
+	background-color: rgba(0,95,155,0.5);
+	border-radius: 10px;
+}
+#customerIDlbl_2{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white; 
+}
+#selectlbl_2{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white; 
+}
+#customerID_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#selectcustomercombobox_2{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#customername_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#customernametxtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#cat_combobox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#cat_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#qty_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#qty_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#gender_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#gendercombobox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#phone_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#phonetxtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#submitcustomer_btn{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+}
+#submitcustomer_btn:hover{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+background-color: rgb(0,95,155);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="customerIDlbl_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>100</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Customer ID</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="customerID_txtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>120</y>
+         <width>301</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="customername_lbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>160</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="customernametxtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>180</y>
+         <width>301</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="gender_lbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>220</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Gender</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="phone_lbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>280</y>
+         <width>151</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Phone Number</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="phonetxtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>300</y>
+         <width>301</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="gendercombobox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>240</y>
+         <width>301</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>Male</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Female</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="selectlbl_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Select</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="selectcustomercombobox_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>60</y>
+         <width>301</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Update</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="submitcustomer_btn">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>350</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>30</y>
+        <width>351</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(0,95,155,0.5);
+	border-radius: 10px;
+color:White;</string>
+      </property>
+      <property name="text">
+       <string>Manage Customer</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="customerTable">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>170</y>
+        <width>501</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+	background-color: rgba(0,95,155,0.5);
+	border-radius: 10px;
+color: white;
+</string>
+      </property>
+      <property name="showGrid">
+       <bool>false</bool>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>4</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <item row="0" column="0">
+       <property name="text">
+        <string>ID</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>Name</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>Gender</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>Phone</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+     </widget>
+     <widget class="QFrame" name="searchCustomerFrame">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>110</y>
+        <width>501</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#searchCustomerFrame{
+background-color: rgba(0,95,155,0.5);
+	border-radius: 10px;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="searchCustomerTxtbox">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Search Here</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="seaarchCustomerBtn">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>10</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#seaarchCustomerBtn:hover{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+background-color: rgb(0,95,155);
+}
+#seaarchCustomerBtn{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="searchCustomerCombobox">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>10</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Name</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Gender</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Phone</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="customerError_lbl">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>630</y>
+        <width>461</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>Manage Categories</string>
+    </attribute>
+    <widget class="QFrame" name="manageCategoriesFrame">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>-10</y>
+       <width>961</width>
+       <height>701</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#manageCategoriesFrame{
+background-color: rgb(236,240,241);
+}
+#manageCatgeorieslbl{
+color: black;
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QFrame" name="full_frame">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>70</y>
+        <width>871</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#full_frame{
+	background-color: rgba(99,128,135,0.6);
+border: 1px solid black;
+border-radius: 10px;
+}
+#search_frame{
+	background-color: rgba(75,98,103,0.5);
+border-radius: 5px;
+border: 1px solid black;
+}
+#add_frame{
+	background-color: rgba(75,98,103,0.5);
+border-radius: 5px;
+border: 1px solid black;
+}
+#cat_lbl_3{
+background-color: transparent;
+color: white;
+}
+#add_lbl{
+background-color: transparent;
+color: white;
+}
+#searchcategorytxtbox{
+background-color: transparent;
+border: 1px;
+border-bottom: 1px solid white;
+color: white;
+}
+#cat_txtbox{
+background-color: transparent;
+border: 1px;
+border-bottom: 1px solid white;
+color: white;
+}
+#add_combobox{
+background-color: transparent;
+border: 1px;
+border-bottom: 1px solid white;
+color: white;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTableWidget" name="cat_table">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>130</y>
+         <width>261</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+	background-color: rgba(75,98,103,0.8);
+border-radius: 5px;
+border: 1px solid black;
+color: white;
+</string>
+       </property>
+       <property name="showGrid">
+        <bool>false</bool>
+       </property>
+       <property name="gridStyle">
+        <enum>Qt::SolidLine</enum>
+       </property>
+       <property name="rowCount">
+        <number>5</number>
+       </property>
+       <property name="columnCount">
+        <number>1</number>
+       </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <column/>
+       <item row="0" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>80</y>
+         <width>121</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;</string>
+       </property>
+       <property name="text">
+        <string>Categories</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="add_frame">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>420</y>
+         <width>821</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QComboBox" name="add_combobox">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>50</y>
+          <width>631</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Add</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Delete</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLineEdit" name="cat_txtbox">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>10</y>
+          <width>631</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="placeholderText">
+         <string>Name</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="add_lbl">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Add/Delete</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="cat_lbl_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Category Name</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="search_frame">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>831</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLineEdit" name="searchcategorytxtbox">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>691</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="placeholderText">
+         <string>Search Here</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="searchcategoryBtn">
+        <property name="geometry">
+         <rect>
+          <x>720</x>
+          <y>10</y>
+          <width>91</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#searchcategoryBtn:hover{
+background-color: rgba(0,0,0,0.8);
+border-radius: 10px;
+color: white;
+}
+#searchcategoryBtn{
+background-color: rgba(0,0,0,0.5);
+border-radius: 10px;
+color: white;
+}</string>
+        </property>
+        <property name="text">
+         <string>Search</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="submitcategorybtn">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>530</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+#submitcategorybtn:hover{
+background-color: rgba(0,0,0,0.8);
+border-radius: 10px;
+color: white;
+}
+#submitcategorybtn{
+background-color: rgba(0,0,0,0.6);
+border-radius: 10px;
+color: white;
+}</string>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="manageCatgeorieslbl">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>20</y>
+        <width>281</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Manage Categories</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>-70</x>
+        <y>-90</y>
+        <width>1071</width>
+        <height>761</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/newPrefix/Gated-Products.jpg);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label_5</zorder>
+     <zorder>full_frame</zorder>
+     <zorder>manageCatgeorieslbl</zorder>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Manage Products</string>
+    </attribute>
+    <widget class="QFrame" name="addproductFrame">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>-10</y>
+       <width>981</width>
+       <height>691</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#addproductFrame{
+background-color: rgb(250,205,174);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QFrame" name="Product_frame">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>90</y>
+        <width>831</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#Product_frame{
+	background-color: rgba(247,170,119,0.5);
+	border-radius: 10px;
+}
+#ID_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white; 
+}
+#selectlbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white; 
+}
+#ID_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#selectcombobox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#name_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#name_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#cat_combobox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#cat_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#qty_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#qty_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#buyPrice_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#buyPrice_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#sellPrice_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#sellPrice_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="ID_lbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>90</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ID_txtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>110</y>
+         <width>751</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="name_lbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>150</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="name_txtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>170</y>
+         <width>751</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="cat_lbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>210</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Category</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="qty_lbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>270</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Quantity</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="qty_txtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>290</y>
+         <width>751</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="buyPrice_lbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>330</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Buying Price</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="buyPrice_txtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>350</y>
+         <width>751</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="sellPrice_lbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>390</y>
+         <width>111</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Selling Price</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="sellPrice_txtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>410</y>
+         <width>751</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="cat_combobox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>230</y>
+         <width>751</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="selectlbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Select</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="selectcombobox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>50</y>
+         <width>751</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Update</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="submitBtn">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>460</y>
+         <width>101</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#submitBtn{
+	background-color: rgba(247,170,119,0.8);
+	color: white;
+	border-radius: 5px;
+}
+#submitBtn:hover{
+	background-color: rgb(244,143,77);
+	color: rgb(255, 255, 255);
+	border: 1px solid white;
+	border-radius: 5px
+}</string>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>30</y>
+        <width>351</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	background-color: rgba(247,170,119,0.5);
+	border-radius: 10px;
+color:white;</string>
+      </property>
+      <property name="text">
+       <string>Manage Products</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="addproductError_lbl">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>630</y>
+        <width>401</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: Green;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>0</y>
+        <width>941</width>
+        <height>671</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/newPrefix/slide2.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label</zorder>
+     <zorder>Product_frame</zorder>
+     <zorder>label_3</zorder>
+     <zorder>addproductError_lbl</zorder>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>Sales</string>
+    </attribute>
+    <widget class="QFrame" name="SalesFrame">
+     <property name="geometry">
+      <rect>
+       <x>-11</x>
+       <y>-11</y>
+       <width>971</width>
+       <height>691</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#SalesFrame{
+background-color: rgb(77,191,191)
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>981</width>
+        <height>691</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/newPrefix/Secret-Solutions-to-Effective-Sales-Conversations-Identified.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QFrame" name="salesserachFrame">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>891</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#salesserachFrame{
+background-color: rgba(54,150,150,0.6);
+	border-radius: 10px;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="searchSalestxtbox">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>561</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Search Here</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="sales_search_btn">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>10</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#sales_search_btn:hover{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+background-color: rgb(49,136,136);
+}
+#sales_search_btn{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="salesSearchCombobox">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>10</y>
+         <width>191</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>All</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Order ID</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Customer ID</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Date</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>30</y>
+        <width>351</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	background-color: rgba(54,150,150,0.6);
+	border-radius: 10px;
+color:White;</string>
+      </property>
+      <property name="text">
+       <string>Sales</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="salestable">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>140</y>
+        <width>561</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+	background-color: rgba(54,150,150,0.6);
+	border-radius: 10px;
+color: white;
+</string>
+      </property>
+      <property name="showGrid">
+       <bool>false</bool>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>5</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <item row="0" column="0">
+       <property name="text">
+        <string>Date</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>Order ID</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>Customer ID</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>Cost</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="4">
+       <property name="text">
+        <string>Bill</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+     <widget class="QFrame" name="salesframe2">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>140</y>
+        <width>321</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#salesframe2{
+	background-color: rgba(54,150,150,0.6);
+	border-radius: 10px;
+}
+#cost_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white; 
+}
+#total_sales_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white; 
+}
+#cost_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#selectcustomercombobox_2{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#customername_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#total_sales_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#profit_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#profit_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#qty_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#qty_txtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#gender_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#gendercombobox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#phone_lbl{
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+#phonetxtbox{
+	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#submitcustomer_btn{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+}
+#submitcustomer_btn:hover{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+background-color: rgb(0,95,155);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="cost_lbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>100</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Cost</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="cost_txtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>120</y>
+         <width>261</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="total_sales_lbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>160</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Sales</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="total_sales_txtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>180</y>
+         <width>261</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="profit_lbl">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>220</y>
+         <width>151</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Profit</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="profit_txtbox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>240</y>
+         <width>261</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_6">
+    <attribute name="title">
+     <string>Sales Details</string>
+    </attribute>
+    <widget class="QFrame" name="salesDetails_Frame">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>0</y>
+       <width>971</width>
+       <height>711</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#salesDetails_Frame{
+background-color: rgb(75,197,222);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QFrame" name="salesdetailsFrame">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>70</y>
+        <width>901</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#salesdetailsFrame{
+	background-color: rgba(30,142,166,0.5);
+	border-radius: 10px;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="searchSalestxtbox_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Search Here</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="salesdetails_search_btn">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>10</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#salesdetails_search_btn:hover{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+background-color: rgb(49,136,136);
+}
+#salesdetails_search_btn{
+color: white;
+border: 1px solid white;
+border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="salesSearchCombobox_2">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>10</y>
+         <width>151</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Date</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Order ID</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Customer ID</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Customer Name</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Customer Phone</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Product ID</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Product Name</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cast</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Price</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="searchSalestxtbox_3">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>10</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Search Here</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="salesSearchCombobox_3">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>10</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">	background-color: transparent;
+	border: 5px;
+	border-bottom: 1px solid white;
+	color: white;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Date</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Order ID</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cust ID</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Customer Name</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Customer Phone</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Product ID</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cost</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Price</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>20</y>
+        <width>351</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	background-color: rgba(30,142,166,0.5);
+	border-radius: 10px;
+color:White;</string>
+      </property>
+      <property name="text">
+       <string>Sales Details</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="salesDetailsTable">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>130</y>
+        <width>901</width>
+        <height>461</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+	background-color: rgba(30,142,166,0.5);
+	border-radius: 10px;
+color: white;
+</string>
+      </property>
+      <property name="showGrid">
+       <bool>false</bool>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>9</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <item row="0" column="0">
+       <property name="text">
+        <string>Date</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>Order ID</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>Cust ID</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>Cust Name</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="4">
+       <property name="text">
+        <string>Phone</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="5">
+       <property name="text">
+        <string>Product ID</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="6">
+       <property name="text">
+        <string>Prod Name</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="7">
+       <property name="text">
+        <string>Cost</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="0" column="8">
+       <property name="text">
+        <string>Price</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="totalsalesdetails">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>600</y>
+        <width>351</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	background-color: rgba(30,142,166,0.5);
+	border-radius: 10px;
+color:White;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>951</width>
+        <height>651</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/newPrefix/what-makes-a-good-sales-manager-blog-header-1-650x377.jpg);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label_12</zorder>
+     <zorder>salesdetailsFrame</zorder>
+     <zorder>label_11</zorder>
+     <zorder>salesDetailsTable</zorder>
+     <zorder>totalsalesdetails</zorder>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="projectimages.qrc"/>
+ </resources>
+ <connections/>
+</ui>
